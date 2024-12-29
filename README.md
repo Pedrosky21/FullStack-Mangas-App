@@ -10,11 +10,11 @@ La Base de Datos está hecha en SQLite.
 ![Arquitectura Servidor](https://github.com/user-attachments/assets/31c1a931-0dba-44bc-b733-d39781ef5a47)
 
 
-Controllers: Se ubican las funciones a ejecutar según cada ruta.
-Models: Definición de los ORM.
-Providers: Servicio de conexión con la BBDD.
-Public: Imágenes.
-Routes: Definición de rutas para cada endpoint.
+Controllers: Se ubican las funciones a ejecutar según cada ruta.  
+Models: Definición de los ORM.  
+Providers: Servicio de conexión con la BBDD.  
+Public: Imágenes.  
+Routes: Definición de rutas para cada endpoint.  
 
 
 ## Frontend
