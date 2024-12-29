@@ -1,5 +1,6 @@
 # FullStack-Mangas-App
 Aplicación Fullstack de mangas
+
 La aplicación de mangas permite gestionar una colección de mangas mediante operaciones CRUD (Crear, Leer, Actualizar, Eliminar).
 
 ## Backend
