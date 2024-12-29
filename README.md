@@ -7,14 +7,8 @@ Se realizó con NodeJs y la librería Express.
 La Base de Datos está hecha en SQLite.
 
 ### Arquitectura del servidor
-/API
-|- ./data
-|- /app
-    |- controllers
-    |- models
-    |- providers
-    |- public
-    |- routes
+![Arquitectura Servidor](https://github.com/user-attachments/assets/31c1a931-0dba-44bc-b733-d39781ef5a47)
+
 
 Controllers: Se ubican las funciones a ejecutar según cada ruta.
 Models: Definición de los ORM.
