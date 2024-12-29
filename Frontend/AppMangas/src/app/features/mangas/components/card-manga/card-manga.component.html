@@ -1,0 +1,29 @@
+<div class="card">
+  <img [src]="manga.img_url" class="card-img-top" alt="image_manga" />
+  <div class="card-body">
+    <h5 class="card-title">{{ manga.titulo }}</h5>
+    <p class="card-text">Autor: {{ manga.autorNombre }}</p>
+  </div>
+  <div class="card-footer">
+    <div
+      class="btn-group d-grid gap-2 d-md-flex"
+      role="group"
+      aria-label="Basic outlined example"
+    >
+      <button 
+        type="button" 
+        class="btn btn-outline-primary"
+        (click)="sendMangaToPage()"
+      >
+        <i class="bi bi-pencil"></i>
+      </button>
+      <button 
+        type="button" 
+        class="btn btn-outline-danger"
+        (click)="sendMangaToPage(true)"
+        >
+        <i class="bi bi-trash3"></i>
+      </button>
+    </div>
+  </div>
+</div>

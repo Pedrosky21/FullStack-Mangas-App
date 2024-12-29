@@ -1,0 +1,65 @@
+<app-navbar></app-navbar>
+
+<div class="container">
+  <div class="alert alert-primary mt-3" role="alert">
+    Ingrese los datos del manga a agregar
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="container">
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Titulo</mat-label>
+          <input matInput placeholder="Ingrese un titulo" formControlName="titulo">
+          <mat-error *ngIf="tituloCtrl.touched && tituloCtrl.invalid">El titulo debe tener entre 1 y 50 caracteres</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Autor</mat-label>
+          <input matInput placeholder="Ingrese un autor" formControlName="autor">
+          <mat-error *ngIf="autorCtrl.touched && autorCtrl.invalid">El autor debe tener entre 1 y 50 caracteres</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Tomos</mat-label>
+          <input matInput type="number" placeholder="Ingrese los tomos" formControlName="tomos">
+          <mat-error *ngIf="tomosCtrl.touched && tomosCtrl.invalid">Debe ingresar la cantidad de tomos</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha de Lanzamiento</mat-label>
+          <input matInput type="date" formControlName="fechaLanzamiento">
+          <mat-error *ngIf="fechaLanzamientoCtrl.touched && fechaLanzamientoCtrl.invalid">Debe ingresar la fecha</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Estado</mat-label>
+          <mat-select formControlName="estado">
+            <mat-option *ngFor="let estado of estados" [value]="estado.id">
+              {{estado.nombre}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="estadoCtrl.touched && estadoCtrl.invalid">Debe seleccionar un estado</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Genero</mat-label>
+          <mat-select formControlName="genero">
+            <mat-option *ngFor="let genero of generos" [value]="genero.id">
+              {{genero.nombre}}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="generoCtrl.touched && generoCtrl.invalid">Debe seleccionar un genero</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <button mat-raised-button type="button" [routerLink]="['/mangas']">Cancelar</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Añadir</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,43 @@
+.card {
+    background: linear-gradient(to right, #330255, 20%,#0d0115);
+    color: white;
+}
+
+.card-body {
+    display: flex;
+}
+
+.top-card {
+    display: flex;
+    align-items: center;
+}
+
+#proyecto-texto {
+    margin-left: 5px;
+}
+
+.tecnologias-header {
+    display: flex;
+    justify-content: center;
+}
+
+.imagenes-div {
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.imagen-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.imagen-div:hover {
+    transform: scale(1.2);
+}
+
+.imagen {
+    height: 5rem;
+}

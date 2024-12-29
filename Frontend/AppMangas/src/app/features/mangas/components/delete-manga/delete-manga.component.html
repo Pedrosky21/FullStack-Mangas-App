@@ -1,0 +1,21 @@
+<!-- Modal de Bootstrap -->
+<div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="sta" aria-hidden="true"
+     [ngClass]="{'show': mostrarModal}" [style.display]="mostrarModal ? 'block' : 'none'">
+     <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel" *ngIf="manga">¿Desea eliminar el manga "{{manga.titulo}}?"</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onCerrarModal()"></button>
+        </div>
+        <div class="modal-body" *ngIf="manga">
+            <div class="alert alert-danger" role="alert">
+              Atención! Esta acción no se podrá deshacer
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onCerrarModal()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="borrarManga(manga)">Borrar</button>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+.card {
+    background: linear-gradient(to right, #330255, 20%,#0d0115);
+    color: white;
+}
+
+.top-card {
+    display: flex;
+    align-items: center;
+}
+
+#datos {
+    margin-left: 1rem;
+}
+
+#imagen-mia {
+    width: 10rem;
+    border-radius: 100%;
+}

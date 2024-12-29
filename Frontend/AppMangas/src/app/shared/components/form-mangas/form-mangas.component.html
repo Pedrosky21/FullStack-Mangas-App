@@ -1,0 +1,47 @@
+<form (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <label class="form-label">Titulo</label>
+    <input
+      type="text"
+      class="form-control"
+      name="searchTitulo"
+      [(ngModel)]="placeholders.titulo"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Autor</label>
+    <input
+      type="text"
+      class="form-control"
+      name="searchAutor"
+      [(ngModel)]="placeholders.autor"
+    />
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Estado</label>
+    <select
+      class="form-select"
+      name="searchEstado"
+      [(ngModel)]="placeholders.estado"
+    >
+      <option value="" selected>Cualquiera</option>
+      <option [value]="est.id" *ngFor="let est of estados">
+        {{ est.nombre }}
+      </option>
+    </select>
+  </div>
+  <div class="mb-3">
+    <label class="form-label">Género</label>
+    <select
+      class="form-select"
+      name="searchGenero"
+      [(ngModel)]="placeholders.genero"
+    >
+      <option value="" selected>Cualquiera</option>
+      <option [value]="gen.id" *ngFor="let gen of generos">
+        {{ gen.nombre }}
+      </option>
+    </select>
+  </div>
+  <button type="submit" class="btn btn-primary">Buscar</button>
+</form>

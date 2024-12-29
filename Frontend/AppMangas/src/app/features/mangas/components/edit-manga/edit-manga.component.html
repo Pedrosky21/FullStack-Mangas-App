@@ -1,0 +1,71 @@
+<!-- Modal de Bootstrap -->
+<div class="modal fade" id="staticBackdrop" tabindex="-1" role="dialog" aria-labelledby="sta" aria-hidden="true"
+     [ngClass]="{'show': mostrarModal}" [style.display]="mostrarModal ? 'block' : 'none'">
+     <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel" *ngIf="mangaDatos">Editar "{{mangaDatos.titulo}}"</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" (click)="onCerrarModal()"></button>
+        </div>
+        <div class="modal-body" *ngIf="mangaDatos">
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Titulo</label>
+              <input
+                type="text"
+                class="form-control"
+                name="editTitulo"
+                [(ngModel)]="mangaDatos.titulo"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Autor</label>
+              <input
+                type="text"
+                class="form-control"
+                name="editAutor"
+                [(ngModel)]="autores[mangaDatos.autor - 1].nombre"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Tomos</label>
+              <input
+                type="text"
+                class="form-control"
+                name="editTomos"
+                [(ngModel)]="mangaDatos.tomos"
+              />
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Estado</label>
+              <select
+                class="form-select"
+                name="editEstado"
+                [(ngModel)]="mangaDatos.estado"
+              >
+                <option [value]="est.id" *ngFor="let est of estados">
+                  {{ est.nombre }}
+                </option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Género</label>
+              <select
+                class="form-select"
+                name="editGenero"
+                [(ngModel)]="mangaDatos.genero"
+              >
+                <option [value]="gen.id" *ngFor="let gen of generos">
+                  {{ gen.nombre }}
+                </option>
+              </select>
+            </div>
+          </form>          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="onCerrarModal()">Close</button>
+          <button type="button" class="btn btn-primary" (click)="editarManga(mangaDatos)">Understood</button>
+        </div>
+      </div>
+    </div>
+</div>
