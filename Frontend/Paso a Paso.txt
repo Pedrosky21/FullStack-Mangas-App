@@ -1,0 +1,66 @@
+ng new MangasApp --standalone false
+
+ng generate module core
+ng generate module shared
+
+ng generate module features/Inicio --routing
+ng generate component features/Inicio...
+.../pages/inicioPage
+
+ng generate module features/mangas --routing
+ng generate component features/mangas...
+.../pages/mangasPage
+
+Dejamos solo <router-outlet/> en 
+app.component.html
+
+Importar CoreModule en
+app.module.ts
+
+Poner rutas en
+app-routing.module.ts
+
+Poner rutas en
+inicio-routing.module.ts &&
+mangas-routing.module.ts
+
+ng generate service core/services/mangas...
+/mangas-api
+
+ng generate component shared/components/navbar
+
+Exportar componente NavbarComponent en
+shared.module
+
+Importar SharedModule en
+inicio.module.ts &&
+mangas.module.ts
+
+npm install bootstrap
+
+Poner styles y scripts de bootstrap en
+angular.json
+
+Importar RouterModule en shared.module
+
+Hacer navbar
+
+Poner <app-navbar> en
+inicio-page.component.html &&
+mangas-page.component.html
+
+Importar HttpClient && Observable en
+mangas-api.service.ts.service.ts
+- Hacer servicio de consulta API
+
+ng generate component features/mangas...
+/components/card-manga
+
+En app.module.ts
+importar &&
+agregar en providers: 
+provideHttpClient(withFetch())
+
+En card-manga.component.ts
+importar input
+Hacer card

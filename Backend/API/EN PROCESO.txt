@@ -1,0 +1,27 @@
+Para el 18/12
+-----------------------------------------------------
+FALTA:
+TERMINAR EL AÑADIR MANGA
+
+APRENDER INTERFACES Y ENTORNO,
+INTERFAZ PARA LO QUE VA A ENVIARSE Y RECIBIRSE DEL BACK Y
+ENTORNO PARA QUE LOCALHOST NO ESTE EN LOS SERVICIOS
+
+AGREGAR RECEPCION DE IMAGENES (PARA QUE PUEDAN SUBIRSE DESDE EL FRONT)
+
+SUBIR TODO A GITHUB
+
+Para el 18/12
+------------------------------------------------------
+AL Final ->
+APRENDER AUTENTICACION
+AGREGAR AUTENTICACION
+
+Para el 19/12
+------------------------------------------------------
+APRENDER A TESTEAR
+HACER TESTS
+
+Para el 20/12 Y 21/12
+------------------------------------------------------
+APRENDER A DEPLOYAR
