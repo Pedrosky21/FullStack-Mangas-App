@@ -22,3 +22,17 @@ Se realizó con Angular, utilizando formularios reactivos y Angular Material par
 Los estilos se dieron con Bootstrap.
 
 ### Arquitectura Angular
+/src
+|- /assets
+|- /app
+    |- core
+    |- shared
+    |- features
+      |- feature
+        |- components
+        |- pages
+La arquitectura es modular (no standalone) y separada por features.
+**core**: Las conexiones a las api (backend)
+**shared**: Componentes compartidos para todas las features (en este caso el navbar)
+**features**: Una feature por pagina (en este caso inicio y mangas), la cual contiene su componente página y los componentes a utilizar para esta.
+En assets se encuentran las imágenes.
