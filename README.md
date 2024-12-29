@@ -8,6 +8,7 @@ La Base de Datos está hecha en SQLite.
 
 ### Arquitectura del servidor
 ![Arquitectura Servidor](https://github.com/user-attachments/assets/31c1a931-0dba-44bc-b733-d39781ef5a47)
+
 Controllers: Se ubican las funciones a ejecutar según cada ruta.  
 Models: Definición de los ORM.  
 Providers: Servicio de conexión con la BBDD.  
@@ -21,6 +22,7 @@ Los estilos se dieron con Bootstrap.
 
 ### Arquitectura Angular
 ![Arquitectura Frontend](https://github.com/user-attachments/assets/a1dd4e38-cd84-4729-b471-dc8a249c2aad)
+
 La arquitectura es modular (no standalone) y separada por features.
 **core**: Las conexiones a las api (backend)
 **shared**: Componentes compartidos para todas las features (en este caso el navbar)
